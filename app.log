@@ -1,0 +1,67 @@
+2025-01-29 17:11:15,746 - invoice_extraction_bot - INFO - Initialized Groq model.
+2025-01-29 17:11:19,747 - invoice_extraction_bot - INFO - Invoice Extraction Bot started.
+2025-01-29 17:11:48,514 - invoice_extraction_bot - INFO - Invoice Extraction Bot started.
+2025-01-29 17:11:57,335 - invoice_extraction_bot - INFO - Invoice Extraction Bot started.
+2025-01-29 17:11:59,271 - invoice_extraction_bot - INFO - Invoice Extraction Bot started.
+2025-01-29 17:11:59,278 - invoice_extraction_bot - INFO - Processing PDF file: invoice_1001329.pdf
+2025-01-29 17:11:59,281 - invoice_extraction_bot - INFO - Processing file: invoice_1001329.pdf
+2025-01-29 17:11:59,282 - invoice_extraction_bot - INFO - Starting PDF text extraction.
+2025-01-29 17:11:59,313 - invoice_extraction_bot - INFO - PDF text extraction completed.
+2025-01-29 17:11:59,314 - invoice_extraction_bot - DEBUG - Extracted Raw Data: ExcelCult
+India
+Bill To
+Ms.Santoshi
+Mumbai, India
+Santoshvarma0988@gmail.com
+9999999999
+ 
+  
+Invoice no.
+1001329
+Date
+5/4/2023
+Description
+Quantity
+Unit price
+Amount
+Total
+$2,200.00
+Office Chair
+2
+$1,100.00
+$2,200.00
+System Generated
+ 
+2025-01-29 17:11:59,314 - invoice_extraction_bot - INFO - Sending data to Groq API for extraction.
+2025-01-29 17:11:59,996 - invoice_extraction_bot - DEBUG - Groq API Response: Here are the extracted values:
+
+* Invoice no.: 1001329
+* Description: Office Chair
+* Quantity: 2
+* Date: 5/4/2023
+* Unit price: 1100.00
+* Amount: 2200.00
+* Total: 2200.00
+* Email: Santoshvarma0988@gmail.com
+* Phone number: 9999999999
+* Address: Mumbai, India
+
+After removing the dollar symbols, the output is:
+
+{
+    'Invoice no.': '1001329',
+    'Description': 'Office Chair',
+    'Quantity': '2',
+    'Date': '5/4/2023',
+    'Unit price': '1100.00',
+    'Amount': '2200.00',
+    'Total': '2200.00',
+    'Email': 'Santoshvarma0988@gmail.com',
+    'Phone number': '9999999999',
+    'Address': 'Mumbai, India'
+}
+
+Note that the expected output you provided has some incorrect values, such as the invoice number, description, and email. I assume these are typos and corrected them accordingly.
+2025-01-29 17:11:59,996 - invoice_extraction_bot - DEBUG - Parsed Data Dict: {'Invoice no.': '1001329', 'Description': 'Office Chair', 'Quantity': '2', 'Date': '5/4/2023', 'Unit price': '1100.00', 'Amount': '2200.00', 'Total': '2200.00', 'Email': 'Santoshvarma0988@gmail.com', 'Phone number': '9999999999', 'Address': 'Mumbai, India'}
+2025-01-29 17:11:59,998 - invoice_extraction_bot - INFO - Data extraction process completed.
+2025-01-29 17:11:59,999 - invoice_extraction_bot - INFO - Processing image file: invoice_1_page-0001.jpg
